@@ -1,0 +1,42 @@
+.main {
+  padding: 20px;
+  height: 900px;
+}
+
+
+#lastinn {
+  padding: 10px;
+  font-size: 14pt;
+  font-family: Merriweather, serif;
+}
+
+#resultat {
+  font-size: 36pt;
+  display: flex;
+  flex-direction: column;
+}
+
+#valg {
+  font-size: 23pt;
+  background-color: #3F51B5;
+  color: white;
+  padding: 0.7em;
+  margin: auto;
+  border: none;
+}
+
+#elev {
+  font-family: Montserrat, sans-serif;
+  font-size: 56pt;
+  color: #3F51B5;
+  margin: auto;
+  padding-bottom: 1em;
+}
+
+
+h1 {
+  font-family: Montserrat, sans-serif;
+  color: #3F51B5;
+  font-size: 48pt;
+  margin-top: 10px;
+}
