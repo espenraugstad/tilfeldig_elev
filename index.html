@@ -1,7 +1,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Untaitled</title>
+    <meta name="author" content="Espen Raugstad">
+    <link rel="Shortcut Icon" href="styles/v.png" type="image/x-icon">
+    <title>Velg tilfeldig</title>
     <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
     <script language="javascript" src="libraries/p5.dom.js"></script>
     <script language="javascript" type="text/javascript" src="libraries/script.js"></script>
@@ -12,10 +14,13 @@
   <div id="lastinn">
     <h1>Velg tilfeldig elev</h1>
     <div>
-      Åpne en tekstfil med elevenes navn hvor hvert navn står på en linje. Filen må være en ren tekstfil. <br />Klikk deretter på "Velg elev".
+      Åpne en tekstfil hvor elevenes navn er listet opp, en elev per linje. Filen må være en ren tekstfil. <br />Klikk deretter på "Velg elev".
     </div>
     <p id="velgfil"></p>
     <p id="bekreft">Last inn en fil med elevenes navn. </p>
+    <p>
+      <label><input type="checkbox" id="tilbake" value="first_checkbox"> Uten tilbakelegging</label>
+    </p>
   </div>
 
 
