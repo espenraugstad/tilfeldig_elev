@@ -26,7 +26,10 @@ function setup() {
 function checkChange() {
   // Hvis endres til checked, restart listen uten tilbakelegging
   if (select('#tilbake').checked) {
+    listeUten.length = 0;
     listeUten = liste.slice();
+  } else {
+    listeUten.length = 0;
   }
 }
 
@@ -41,28 +44,28 @@ function velgElev() {
     // Hvis lista er tom, gi beskjed og reset
     if (listeUten.length == 0) {
       listeUten = liste.slice();
-      println(listeUten.length);
       alert('Ferdig. Trykk OK for å begynne på nytt.');
     } else {
       select('#elev').html(listeUten[valgUten]);
       // Fjern elementet fra listeUten
       listeUten.splice(valgUten,1);
-      println(listeUten);
-      //println('ValgUten= '+valgUten);
-      //println('Lengde= '+listeUten.length);
     }
   } else {
     select('#elev').html(liste[valg]);
-    println(liste);
+
   }
 
 }
 
 function gotFile(data) {
-  //liste = [];
+  // Nullstill listene
+  liste.length = 0;
+  listeUten.length = 0;
+
   // Fjern tomme linjer
   var tempListe = [];
-  tempListe = data.data.split(/\r\n|\n/);
+
+  tempListe = data.data.split(/\r\n|\n|\r/);
   for (var i = 0; i < tempListe.length; i++) {
     if (tempListe[i] !== '') {
       liste.push(tempListe[i]);
